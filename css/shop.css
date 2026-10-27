@@ -1,0 +1,168 @@
+* {
+  box-sizing: border-box;
+}
+
+.shop {
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  position: relative;
+  z-index: 9999;
+}
+
+h2 {
+  font-size: 26px;
+  font-weight: bold;
+  margin: 10px 0 20px;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 5px 0 10px;
+}
+
+h4 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 5px 0 10px;
+}
+
+.container {
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+@media screen and (max-width: 782px) {
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .products {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(50px, auto);
+  grid-gap: 10px;
+}
+
+.products div.product {
+  background-image: linear-gradient(to top left, #33cccc 0%, #cc33ff 100%);
+  border: 4px solid transparent;
+  border-color: black;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.products img {
+  border: 5px solid transparent;
+  border-color: black;
+  width: 300px;
+  max-width: 100%;
+  height: auto;
+}
+
+.product {
+  border: 1px solid #999;
+  text-align: center;
+  padding: 10px;
+}
+
+.cart-container {
+  display: flex;
+  justify-content: flex-start;
+  background-image: linear-gradient(to top left, #33cccc 0%, #cc33ff 100%);
+}
+
+@media screen and (max-width: 768px) {
+  .cart-container {
+    flex-direction: column;
+  }
+}
+
+.cart-items {
+  flex: 2;
+  margin-right: 10px;
+}
+
+.cart-items input {
+  width: 70%;
+}
+
+.cart-items ul.cart-labels {
+  border-top: 2px solid #999;
+  border-bottom: 2px solid #999;
+  font-weight: bold;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.cart-items ul.cart-labels li {
+  flex: 1;
+}
+
+.cart-items ul.cart-item {
+  border-bottom: 1px solid #999;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.cart-items ul.cart-item li {
+  flex: 1;
+}
+
+.cart-summary {
+  flex: 1;
+  border: 1px solid #919191;
+  padding: 5px 10px;
+  text-align: center;
+}
+
+.cart-total ul {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.cart-total ul li {
+  flex: 1;
+}
+
+.gradient-button-shop {
+  margin: 10px;
+  font-family: "Arial Black", Gadget, sans-serif;
+  font-size: 20px;
+  padding: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: #fff;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  width: 200px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  cursor: pointer;
+  display: inline-block;
+  border-radius: 25px;
+}
+
+.gradient-button-shop:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.gradient-button-shop-1 {
+  background-image: linear-gradient(to left, #cc33ff 0%, #33cccc 100%);
+}

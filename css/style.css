@@ -1,0 +1,620 @@
+/* ----- background styles ----- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box !important;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  display: table;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  color: #000;
+  line-height: 1.6;
+  font: normal 75% Arial, Helvetica, sans-serif;
+  position: relative;
+  z-index: 0;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+html {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+#particles-js canvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+canvas {
+  /* display: block; */
+  vertical-align: bottom;
+}
+
+/* ----- particles.js container ----- */
+
+#particles-js {
+  width: 100%;
+  height: 100%;
+  background-position: 50% 50%;
+  background: #07080f;
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  z-index: -100;
+  position: absolute;
+}
+
+/* ----- Global/Shared Styles ----- */
+
+.nav-container {
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.container {
+  width: 1000px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 50px;
+}
+
+section h1 {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  color: white;
+}
+
+h2 {
+  line-height: 25px;
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
+  padding-bottom: 25px;
+}
+
+p {
+  line-height: 22px;
+  color: white;
+}
+
+img {
+  image-rendering: crisp-edges;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+
+/* ----- header Styles ----- */
+
+header {
+  background: white;
+  position: relative;
+  z-index: 9999;
+}
+
+header .logo img {
+  width: 100px;
+  max-width: 100%;
+  height: auto;
+}
+
+header .social img {
+  width: 50px;
+  max-width: 100%;
+  height: auto;
+}
+
+header .logo:hover,
+footer .logo:hover {
+  transform: scale(1.1);
+}
+
+nav .nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 30px;
+  cursor: pointer;
+  height: auto;
+}
+
+nav {
+  width: 100%;
+  height: auto;
+}
+
+header .social {
+  display: flex;
+  float: right;
+}
+
+nav ul li {
+  background-image: linear-gradient(to top left, #33cccc 0%, #cc33ff 100%);
+  border: 3px solid transparent;
+  border-color: black;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  display: inline-block;
+  font-size: 16px;
+}
+nav ul a {
+  font-weight: 400;
+  padding: 15px;
+  line-height: 45px;
+  color: black;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+nav ul li:hover {
+  border: 5px solid transparent;
+  border-image: linear-gradient(to top left, #cc33ff 0%, #33cccc 100%) 1;
+  color: #fff;
+}
+nav ul li a:hover {
+  color: #fff;
+}
+
+.topsocial a {
+  padding: 10px;
+}
+
+.topsocial a:hover {
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 1200px) {
+  .nav-container {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 782px) {
+  header .nav-container {
+    grid-template-columns: 100%;
+  }
+  header .logo {
+    width: 100px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .nav-container li {
+    display: flex;
+  }
+}
+
+/* ----- body media queries ----- */
+
+/* ----- about media queries ----- */
+@media screen and (max-width: 1000px) {
+  body .about .container {
+    grid-template-columns: 100%;
+  }
+  body h1,
+  .picture,
+  .paragraph {
+    width: 800px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .container {
+    width: 800px;
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 782px) {
+  body .about .container {
+    grid-template-columns: 100%;
+  }
+  body h1,
+  .picture,
+  .paragraph {
+    width: 500px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .container {
+    width: 500px;
+    max-width: 100%;
+  }
+}
+
+/* ----- links/discord/members media queries ----- */
+@media screen and (max-width: 1000px) {
+  body .links .container {
+    grid-template-columns: 100%;
+  }
+  body .members .container {
+    grid-template-columns: 100%;
+  }
+  body .discord .container {
+    grid-template-columns: 100%;
+  }
+  body .shop .container .products {
+    grid-template-columns: 100%;
+  }
+  body .icon {
+    margin: 0 auto;
+  }
+}
+
+/* ----- podcasts media queries ----- */
+@media screen and (max-width: 1000px) {
+  body .podcasts .container {
+    grid-template-columns: 100%;
+  }
+  body .podcasts {
+    width: 800px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 782px) {
+  body .podcasts .container {
+    grid-template-columns: 100%;
+  }
+  body .podcasts {
+    width: 500px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+
+/* ----- contact media queries ----- */
+@media screen and (max-width: 1000px) {
+  body .contact .container {
+    grid-template-columns: 100%;
+  }
+  body .contact {
+    width: 800px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+
+/* ----- verifyage media queries ----- */
+@media screen and (max-width: 1000px) {
+  body .age .container {
+    grid-template-columns: 100%;
+  }
+  body .age {
+    width: 800px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+
+/* ----- about ----- */
+
+.about {
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  position: relative;
+  z-index: 9999;
+}
+
+.about .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 50px;
+  margin-bottom: 100px;
+}
+
+.about img {
+  max-width: 100%;
+  height: auto;
+}
+
+.about p {
+  padding-bottom: 10px;
+}
+
+/* ----- verify age ----- */
+
+.age {
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 100px;
+  position: relative;
+  z-index: 9999;
+}
+
+label {
+  line-height: 25px;
+  font-size: 25px;
+  font-family: "Arial Black", Gadget, sans-serif;
+  font-weight: bold;
+  color: white;
+}
+
+input {
+  margin: 10px;
+  margin-bottom: 100px;
+  font-family: "Arial Black", Gadget, sans-serif;
+  font-size: 20px;
+  padding: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: #fff;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  width: 200px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  cursor: pointer;
+  display: inline-block;
+  border-radius: 25px;
+  background-image: linear-gradient(to left, #cc33ff 0%, #33cccc 100%);
+}
+
+.hidden {
+  display: none;
+}
+
+/* ----- podcasts ----- */
+
+.podcasts {
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 100px;
+  position: relative;
+  z-index: 9999;
+}
+
+.podcasts h2 {
+  padding-top: 50px;
+}
+
+/* ----- links ----- */
+
+.links {
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 100px;
+  position: relative;
+  z-index: 9999;
+}
+
+.links h2 {
+  padding-top: 50px;
+}
+
+.links img {
+  width: 256px;
+  max-width: 100%;
+  height: auto;
+  padding-bottom: 10px;
+}
+
+.text-container {
+  padding-bottom: 50px;
+}
+
+.links .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+/* ----- discord ----- */
+
+.discord {
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 100px;
+  position: relative;
+  z-index: 9999;
+}
+
+.discord h2 {
+  margin-top: 35px;
+}
+
+.discord img {
+  width: 256px;
+  max-width: 100%;
+  height: auto;
+  margin-top: 50px;
+  padding-bottom: 10px;
+}
+
+/* ----- members ----- */
+
+.members {
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  position: relative !important;
+  z-index: 9999;
+}
+
+.members h1 {
+  margin-bottom: 30px;
+}
+
+.members p.role {
+  font-weight: bold;
+}
+
+.members p {
+  padding-bottom: 10px;
+  text-align: left;
+}
+
+.members .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr auto;
+  grid-column-gap: 50px;
+  grid-row-gap: 75px;
+}
+
+.members div.profile {
+  background-image: linear-gradient(to top left, #33cccc 0%, #cc33ff 100%);
+  border: 4px solid transparent;
+  border-color: black;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.members img.profile {
+  border: 5px solid transparent;
+  border-color: black;
+  width: 300px;
+  max-width: 100%;
+  height: auto;
+}
+
+.members img.social {
+  width: 50px;
+  max-width: 100%;
+  height: auto;
+}
+
+.members h2 {
+  padding-top: 15px;
+}
+
+.members ul {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* ----- contact ----- */
+
+.contact {
+  text-align: center;
+  position: relative;
+  z-index: 9999;
+}
+
+.contact h1 {
+  margin-bottom: 50px;
+}
+
+.gradient-button {
+  margin: 10px;
+  margin-bottom: 100px;
+  font-family: "Arial Black", Gadget, sans-serif;
+  font-size: 20px;
+  padding: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: #fff;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  width: 200px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  cursor: pointer;
+  display: inline-block;
+  border-radius: 25px;
+}
+.gradient-button:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+.gradient-button-1 {
+  background-image: linear-gradient(to left, #cc33ff 0%, #33cccc 100%);
+}
+.gradient-button-1:hover {
+  background-position: right center;
+}
+
+/* ----- footer ----- */
+
+footer {
+  background: #0b0b16;
+  text-align: center;
+  color: white;
+  position: relative;
+  z-index: 9999;
+}
+
+footer h2 {
+  line-height: 35px;
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 10px;
+  padding-bottom: 10px;
+}
+
+footer a {
+  color: white;
+  line-height: 30px;
+  font-size: 18px;
+  padding-bottom: 10px;
+}
+
+footer img {
+  width: 50px;
+  max-width: 100%;
+  height: auto;
+}
+
+footer .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+footer .logo img {
+  width: 100px;
+  max-width: 100%;
+  height: auto;
+  padding-top: 50px;
+}
+
+footer p {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding-right: 10px;
+}
+
+@media screen and (max-width: 1000px) {
+  footer .container {
+    grid-template-columns: 100%;
+  }
+  footer .logo {
+    width: 300px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
